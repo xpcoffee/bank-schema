@@ -7,6 +7,9 @@ export function improveValidationErrors(validationResult: ValidatorResult): Vali
 }
 
 function improveValidationError(validationError: ValidationError): ValidationError {
+    /**
+     * The regex pattern for timestamp is unintelligible.
+     */
     if(validationError.property === "instance.timeStamp") {
         return {
             ...validationError,
