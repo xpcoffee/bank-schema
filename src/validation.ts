@@ -1,5 +1,6 @@
 import {Validator} from "jsonschema";
 import {statementSchema, transactionSchema} from "./schema";
+import { improveValidationErrors } from "./improveValidationErrors";
 
 export function validateStatement(object: any) {
     const validator = new Validator();
@@ -9,5 +10,5 @@ export function validateStatement(object: any) {
 
 export function validateTransaction(object: any) {
     const validator = new Validator();
-    return validator.validate(object, transactionSchema);
+    return improveValidationErrors(validator.validate(object, transactionSchema));
 }

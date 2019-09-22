@@ -30,13 +30,14 @@ describe("validateTransaction", () => {
     it("passes validation on a valid statement", () => {
         const result = validateTransaction({
             "hash": "foobarbaz1",
-            "timeStamp": "foo",
+            "timeStamp": "2019-11-22T00:0aaa0:00+02:00",
             "amountInZAR": 1,
             "description": "baz",
             "balance": 1,
             "unknown key": "should be ignored"
-        }).valid;
-        expect(result).toBeTruthy();
+        });
+        console.log(result);
+        expect(result.valid).toBeTruthy();
     });
 
     it("fails validation on an invalid statement", () => {
