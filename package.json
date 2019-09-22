@@ -1,0 +1,37 @@
+{
+  "name": "bank-schema",
+  "version": "1.0.0",
+  "description": "ZAR-centric standard for representing bank data",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "npm run clean && mkdir -p build && tsc",
+    "clean": "rm -rf build",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xpcoffee/bank-schema.git"
+  },
+  "keywords": [
+    "bank",
+    "zar",
+    "schema",
+    "validator",
+    "data"
+  ],
+  "author": "Emerick Bosch",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xpcoffee/bank-schema/issues"
+  },
+  "homepage": "https://github.com/xpcoffee/bank-schema#readme",
+  "dependencies": {
+    "jsonschema": "^1.2.4",
+    "typescript": "^3.6.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.1.0"
+  }
+}
