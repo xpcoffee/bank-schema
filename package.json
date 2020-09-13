@@ -7,7 +7,8 @@
   "scripts": {
     "build": "npm run clean && mkdir dist && tsc",
     "clean": "rm -rf dist",
-    "test": "jest"
+    "test": "jest",
+    "prepack": "npx tsc"
   },
   "repository": {
     "type": "git",
