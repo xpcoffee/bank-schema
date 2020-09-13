@@ -8,7 +8,7 @@
     "build": "npm run clean && mkdir dist && tsc",
     "clean": "rm -rf dist",
     "test": "jest",
-    "prepack": "npx tsc"
+    "postinstall": "tsc"
   },
   "repository": {
     "type": "git",
