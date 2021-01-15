@@ -1,21 +1,21 @@
-import {validateStatement, validateTransaction} from "../src/validation";
+import { validateStatement, validateTransaction } from "../src/validation";
 
 describe("validateStatement", () => {
     it("passes validation on a valid statement", () => {
         const result = validateStatement({
-            "account": "foo",
-            "bank": "bar",
-            "transactions": [],
-            "unknown key": "should be ignored"
+            account: "foo",
+            bank: "bar",
+            transactions: [],
+            "unknown key": "should be ignored",
         }).valid;
         expect(result).toBeTruthy();
     });
 
     it("fails validation on an invalid statement", () => {
         const result = validateStatement({
-            "account": 1,
-            "bank": 2,
-            "transactions": 3 
+            account: 1,
+            bank: 2,
+            transactions: 3,
         });
         expect(result.valid).toBeFalsy();
     });
@@ -24,28 +24,30 @@ describe("validateStatement", () => {
         const result = validateStatement({});
         expect(result.valid).toBeFalsy();
     });
-})
+});
 
 describe("validateTransaction", () => {
     it("passes validation on a valid statement", () => {
         const result = validateTransaction({
-            "hash": "foobarbaz1",
-            "timeStamp": "2019-11-22T00:00:00+02:00",
-            "amountInZAR": 1,
-            "description": "baz",
-            "balance": 1,
-            "unknown key": "should be ignored"
+            hash: "foobarbaz1",
+            timeStamp: "2019-11-22T00:00:00+02:00",
+            amount: 1,
+            currency: "ZAR",
+            description: "baz",
+            balance: 1,
+            "unknown key": "should be ignored",
         });
+        expect(result.errors).toEqual([]);
         expect(result.valid).toBeTruthy();
     });
 
     it("fails validation on an invalid statement", () => {
         const result = validateTransaction({
-            "hash": 1,
-            "timeStamp": 2,
-            "amountInZAR": 3,
-            "description": 4,
-            "balance": "foo"
+            hash: 1,
+            timeStamp: 2,
+            amountInZAR: 3,
+            description: 4,
+            balance: "foo",
         }).valid;
         expect(result).toBeFalsy();
     });
@@ -54,4 +56,4 @@ describe("validateTransaction", () => {
         const result = validateStatement({});
         expect(result.valid).toBeFalsy();
     });
-})
+});

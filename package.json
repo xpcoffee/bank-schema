@@ -1,39 +1,39 @@
 {
-  "name": "bank-schema",
-  "version": "1.0.0",
-  "description": "ZAR-centric standard for representing bank data",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "scripts": {
-    "build": "npm run clean && mkdir dist && tsc",
-    "clean": "rm -rf dist",
-    "test": "jest",
-    "postinstall": "tsc"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/xpcoffee/bank-schema.git"
-  },
-  "keywords": [
-    "bank",
-    "zar",
-    "schema",
-    "validator",
-    "data"
-  ],
-  "author": "Emerick Bosch",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/xpcoffee/bank-schema/issues"
-  },
-  "homepage": "https://github.com/xpcoffee/bank-schema#readme",
-  "dependencies": {
-    "jsonschema": "^1.2.4"
-  },
-  "devDependencies": {
-    "@types/jest": "^24.0.18",
-    "jest": "^24.9.0",
-    "ts-jest": "^24.1.0",
-    "typescript": "^3.6.3"
-  }
+    "name": "bank-schema",
+    "version": "2.0.0",
+    "description": "Schema for representing monetary data",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "npm run clean && mkdir dist && tsc",
+        "clean": "rm -rf dist",
+        "test": "jest",
+        "postinstall": "tsc"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/xpcoffee/bank-schema.git"
+    },
+    "keywords": [
+        "bank",
+        "zar",
+        "schema",
+        "validator",
+        "data"
+    ],
+    "author": "Emerick Bosch",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/xpcoffee/bank-schema/issues"
+    },
+    "homepage": "https://github.com/xpcoffee/bank-schema#readme",
+    "dependencies": {
+        "jsonschema": "^1.2.4"
+    },
+    "devDependencies": {
+        "@types/jest": "^24.0.18",
+        "jest": "^24.9.0",
+        "ts-jest": "^24.1.0",
+        "typescript": "^3.6.3"
+    }
 }
